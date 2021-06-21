@@ -1246,38 +1246,45 @@
                     <div class="art-a art-card">
 
                       <!-- contact form -->
-                      <form id="form" class="art-contact-form">
+                      <form id="gform" name="gform" target="hidden_iframe" onsubmit="submitted=true;" action="https://docs.google.com/forms/d/e/1FAIpQLSdeIyyJbxE-IccqcCUVXfnwdqul8SPOGgcxHi8m6U2pL_Ivkw/formResponse?" class="art-contact-form">
                         <!-- form field -->
                         <div class="art-form-field">
                           <!-- name input -->
-                          <input id="name" name="name" class="art-input" type="text" placeholder="Name" required>
+                          <input id="entry.2119635096" name="entry.2119635096" class="art-input" type="text" placeholder="Name" required>
                           <!-- label -->
-                          <label for="name"><i class="fas fa-user"></i></label>
+                          <label for="entry.2119635096"><i class="fas fa-user"></i></label>
                         </div>
                         <!-- form field end -->
                         <!-- form field -->
                         <div class="art-form-field">
                           <!-- email input -->
-                          <input id="email" name="email" class="art-input" type="email" placeholder="Email" required>
+                          <input id="entry.1734019118" name="entry.1734019118" class="art-input" type="email" placeholder="Email" required>
                           <!-- label -->
-                          <label for="email"><i class="fas fa-at"></i></label>
+                          <label for="entry.1734019118"><i class="fas fa-at"></i></label>
                         </div>
                         <!-- form field end -->
                         <!-- form field -->
                         <div class="art-form-field">
                           <!-- message textarea -->
-                          <textarea id="message" name="text" class="art-input" placeholder="Message" required></textarea>
+                          <textarea id="entry.1411874132" name="entry.1411874132" class="art-input" placeholder="Message" required></textarea>
                           <!-- label -->
-                          <label for="message"><i class="far fa-envelope"></i></label>
+                          <label for="entry.1411874132"><i class="far fa-envelope"></i></label>
                         </div>
                         <!-- form field end -->
                         <!-- button -->
                         <div class="art-submit-frame">
-                          <button class="art-btn art-btn-md art-submit" type="submit"><span><a href="javascript:alert('Form is not working. Please try again later!')"><font color="white">Send message</font></a></span></button><h7>&nbsp;&nbsp;&nbsp;Currently forms are not working well try to contact me via email.</h7>
-                          <!-- success -->
-                          <div class="art-success">Success <i class="fab fa-check"></i></div>
+                          <button class="art-btn art-btn-md art-submit" type="submit"><input type="submit" style="display: none;"><span>Send message</span></button>
                         </div>
                       </form>
+                      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                      <script src="js/plugins/jquery.min.js"></script>
+                      <script type="text/javascript">var submitted=false;</script>
+                      <script type="text/javascript">
+                      $('#gform').on('submit', function(e) {
+                        $('#gform *').fadeOut(2000);
+                        $('#gform').prepend('Your message sent successfully :)');
+                        });
+                      </script>
                       <!-- contact form end -->
 
                     </div>
