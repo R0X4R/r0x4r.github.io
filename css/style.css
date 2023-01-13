@@ -86,13 +86,13 @@ common
 
 ------------------------------ */
 /* ----- fonts ----- */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("fonts/stylesheet.css");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* ----- text defaults ----- */
 body {
   color: #8c8c8e;
   font-size: 12px;
-  font-family: "Poppins", sans-serif;
+  font-family: "GT Walsheim Pro", sans-serif;
   font-weight: 300;
   letter-spacing: 0.5px;
   font-smooth: subpixel-antialiased;
@@ -109,7 +109,7 @@ h7 {
   font-weight: 700;
   color: #fafafc;
   margin-bottom: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "GT Walsheim Pro", sans-serif;
 }
 
 h1 {
@@ -128,13 +128,13 @@ h5 {
 }
 
 h6 {
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.6;
   font-weight: 200;
 }
 
 h7 {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
   font-weight: 200;
 }
@@ -1622,14 +1622,14 @@ content
 .art-counter-frame .art-counter-box .art-counter {
   color: #FFC107;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "GT Walsheim Pro", sans-serif;
   font-size: 22px;
 }
 .art-counter-frame .art-counter-box .art-counter-plus {
   margin-left: 3px;
   color: #FFC107;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "GT Walsheim Pro", sans-serif;
   font-size: 22px;
 }
 
@@ -2053,7 +2053,7 @@ content
   left: 0;
   padding: 0 15px;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 50px;
   letter-spacing: 1px;
   font-weight: 500;
