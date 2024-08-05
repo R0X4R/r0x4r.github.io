@@ -26,6 +26,9 @@ const config = {
             },
         },
         extend: {
+            fontFamily: {
+                sans: ['Poppins'],
+            },
             colors: {
                 primary: "#0C0C0C",
                 gray: {
