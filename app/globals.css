@@ -1,0 +1,58 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap");
+/* @import url("/fonts/Sanskrit_2003.ttf"); */
+@import url("https: //fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Satoshi", sans-serif;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*::selection {
+    background-color: #FFF;
+    color: #0C0C0C;
+}
+
+/* styles/globals.css */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #141516;
+    animation: fadeOut 2s ease-in-out forwards;
+    /* Adjust timing as needed */
+}
+
+.preloader svg {
+    position: absolute;
+    inset: 0;
+    height: calc(100% + 300px);
+    width: 100%;
+}
+
+.hindi {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.025em;
+    font-weight: 600;
+}
