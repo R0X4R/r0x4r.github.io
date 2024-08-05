@@ -14,7 +14,9 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveMenu }) => {
                 <h2 className="py-8 text-lg font-black uppercase tracking-wide sm:text-2xl md:text-2xl lg:text-5xl">
                     My Projects
                 </h2>
-                <Link href="/projects" className="group flex cursor-pointer items-center justify-center gap-2 bg-transparent text-xs font-medium uppercase tracking-wide text-white lg:text-xl">
+                <Link
+                    href="/projects"
+                    className="group flex cursor-pointer items-center justify-center gap-2 bg-transparent text-xs font-medium uppercase tracking-wide text-white lg:text-xl">
                     View All Projects
                     <span className="hidden transition-all duration-700 ease-in-out group-hover:block">
                         <AiOutlineArrowRight />
@@ -27,7 +29,9 @@ const Projects: React.FC<ProjectsProps> = ({ setActiveMenu }) => {
                         onMouseOver={() => setActiveMenu(i)}
                         key={project.title}
                         className="border-t border-gray-100 px-5 py-8 text-xl font-medium text-gray-100 sm:text-xl md:text-lg lg:text-5xl">
-                        <p>{project.title}</p>
+                        <Link href={project.link}>
+                            <p>{project.title}</p>
+                        </Link>
                     </li>
                 ))}
             </ul>

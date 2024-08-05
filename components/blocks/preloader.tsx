@@ -77,7 +77,7 @@ const Preloader: React.FC = () => {
                         variants={opacity}
                         initial="initial"
                         animate="enter"
-                        className="relative hindi tracking-wide z-10 flex items-center text-4xl text-white">
+                        className="hindi relative z-10 flex items-center font-sans text-4xl tracking-wide text-white">
                         {/* <span className="mr-2.5 block h-2.5 w-2.5 rounded-full bg-white"></span> */}
                         {words[index]}
                     </motion.p>
@@ -88,11 +88,7 @@ const Preloader: React.FC = () => {
                             exit="exit"
                             fill="#0C0C0C"></motion.path>
                     </svg>
-                    <audio
-                        ref={audioRef}
-                        src="/om.mp3"
-                        preload="auto"
-                    />
+                    <audio ref={audioRef} src="/om.mp3" preload="auto" />
                 </>
             )}
         </motion.div>
