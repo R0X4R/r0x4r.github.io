@@ -1,6 +1,6 @@
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap");
 /* @import url("/fonts/Sanskrit_2003.ttf"); */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
