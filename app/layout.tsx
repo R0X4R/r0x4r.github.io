@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "./provider"
+import { twMerge } from "tailwind-merge";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({subsets: ["latin"], style: ["normal"], weight: ["600"]});
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://eshansingh.in"),
@@ -64,7 +68,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="sticky-header scroll-smooth bg-primary antialiased hover:subpixel-antialiased focus:scroll-auto">
+            <body className={twMerge(poppins.className, "sticky-header scroll-smooth bg-primary antialiased hover:subpixel-antialiased focus:scroll-auto")}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"

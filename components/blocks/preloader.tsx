@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react"
 import { motion } from "framer-motion"
 import { opacity, slideUp } from "@/data"
+import { Poppins } from "next/font/google"
 
 const words = ["ओ३म्", "ओ३म्", "खं", "खं", "ब्रह्म"]
 
@@ -77,7 +78,7 @@ const Preloader: React.FC = () => {
                         variants={opacity}
                         initial="initial"
                         animate="enter"
-                        className="hindi relative z-10 flex items-center font-sans text-4xl tracking-wide text-white">
+                        className="font-hindi relative z-10 flex items-center font-sans text-4xl tracking-wide text-white">
                         {/* <span className="mr-2.5 block h-2.5 w-2.5 rounded-full bg-white"></span> */}
                         {words[index]}
                     </motion.p>
