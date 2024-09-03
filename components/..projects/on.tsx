@@ -28,8 +28,8 @@ export const metadata: CustomMetadata = {
 const ProjectPage = () => {
   return (
       <main className="h-[8000px]">
-          <Header />
-          <Zscroll />
+          {/* <Header />
+          <Zscroll /> */}
     </main>
   )
 }

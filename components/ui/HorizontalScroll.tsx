@@ -13,7 +13,7 @@ type Blog = {
 
 const Example = () => {
     return (
-        <div className="bg-primary">
+        <div className="bg-primary-500">
             <HorizontalScrollCarousel />
         </div>
     )
@@ -28,9 +28,9 @@ const HorizontalScrollCarousel = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"])
 
     return (
-        <section ref={targetRef} className="relative h-[300vh] bg-primary">
+        <section ref={targetRef} className="bg-primary-500 relative h-[300vh]">
             <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
-                <h2 className="my-10 text-left text-5xl font-bold text-white">
+                <h2 className="text-primary-100 my-10 text-left text-5xl font-bold">
                     For Community
                 </h2>
                 <motion.div style={{ x }} className="flex gap-8">

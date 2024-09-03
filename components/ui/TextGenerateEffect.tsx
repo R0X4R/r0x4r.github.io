@@ -39,7 +39,7 @@ export const TextGenerateEffect = ({
                             className={` ${
                                 idx > 3
                                     ? "text-red-100"
-                                    : "text-black dark:text-white"
+                                    : "dark:text-primary-100 text-black"
                             } opacity-0`}>
                             {word}{" "}
                         </motion.span>
@@ -54,7 +54,7 @@ export const TextGenerateEffect = ({
             {/* mt-4 to my-4 */}
             <div className="my-4">
                 {/* remove  text-2xl from the original */}
-                <div className="leading-none text-black dark:text-white">
+                <div className="dark:text-primary-100 leading-none text-black">
                     {renderWords()}
                 </div>
             </div>

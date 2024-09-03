@@ -1,11 +1,11 @@
-import React from "react";
-import { IoSchool } from "react-icons/io5";
-import { GrYoga } from "react-icons/gr";
-import { FaSchoolFlag } from "react-icons/fa6";
-import { AiTwotoneSafetyCertificate } from "react-icons/ai";
-import { PiCertificateFill } from "react-icons/pi";
-import { CardSpotlight } from "./card-spotlight";
-import { education } from "@/data";
+import React from "react"
+import { IoSchool } from "react-icons/io5"
+import { GrYoga } from "react-icons/gr"
+import { FaSchoolFlag } from "react-icons/fa6"
+import { AiTwotoneSafetyCertificate } from "react-icons/ai"
+import { PiCertificateFill } from "react-icons/pi"
+import { CardSpotlight } from "./card-spotlight"
+import { education } from "@/data"
 
 const iconComponents: { [key: string]: JSX.Element } = {
     IoSchool: <IoSchool />,
@@ -13,7 +13,7 @@ const iconComponents: { [key: string]: JSX.Element } = {
     FaSchoolFlag: <FaSchoolFlag />,
     AiTwotoneSafetyCertificate: <AiTwotoneSafetyCertificate />,
     PiCertificateFill: <PiCertificateFill />,
-};
+}
 
 const Timeline = () => {
     return (
@@ -22,9 +22,8 @@ const Timeline = () => {
                 {education.map((item, index) => (
                     <div
                         key={index}
-                        className="group relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse"
-                    >
-                        <div className="flex h-10 w-10 transition-transform duration-1000 ease-in-out group-hover:scale-105 group-hover:rotate-[360deg] group-hover:-translate-y-1 cursor-pointer items-center justify-center rounded-full border border-white bg-primary text-white shadow group-hover:bg-white group-hover:text-primary md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        className="group relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse">
+                        <div className="bg-primary-500 text-primary-100 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white shadow transition-transform duration-1000 ease-in-out group-hover:-translate-y-1 group-hover:rotate-[360deg] group-hover:scale-105 group-hover:bg-white group-hover:text-primary-500 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                             {
                                 iconComponents[
                                     item.icon as keyof typeof iconComponents
@@ -33,7 +32,7 @@ const Timeline = () => {
                         </div>
                         <CardSpotlight className="w-[calc(100%-4rem)] cursor-pointer rounded px-4 py-8 md:w-[calc(50%-2.5rem)]">
                             <div className="z-20 mb-1 flex items-center justify-between space-x-2">
-                                <div className="relative z-20 text-lg font-bold text-white">
+                                <div className="text-primary-100 relative z-20 text-lg font-bold">
                                     {item.title}
                                 </div>
                                 <time className="z-20 text-sm font-medium text-red-100">
@@ -48,7 +47,7 @@ const Timeline = () => {
                 ))}
             </div>
         </div>
-    );
+    )
 }
 
-export default Timeline;
+export default Timeline

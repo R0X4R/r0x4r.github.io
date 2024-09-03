@@ -9,19 +9,19 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ setActiveMenu }) => {
     return (
-        <div className="relative z-10 min-h-screen w-full cursor-pointer overflow-y-auto text-white mix-blend-difference">
+        <div className="text-primary-100 relative z-10 min-h-screen w-full cursor-pointer overflow-y-auto mix-blend-difference">
             <div className="flex items-center justify-between px-1 lg:px-5">
                 <h2 className="py-8 text-lg font-black uppercase tracking-wide sm:text-2xl md:text-2xl lg:text-5xl">
                     My Projects
                 </h2>
-                <Link
+                {/* <Link
                     href="/projects"
-                    className="group flex cursor-pointer items-center justify-center gap-2 bg-transparent text-xs font-medium uppercase tracking-wide text-white lg:text-xl">
+                    className="group flex cursor-pointer items-center justify-center gap-2 bg-transparent text-xs font-medium uppercase tracking-wide text-primary-100 lg:text-xl">
                     View All Projects
                     <span className="hidden transition-all duration-700 ease-in-out group-hover:block">
                         <AiOutlineArrowRight />
                     </span>
-                </Link>
+                </Link> */}
             </div>
             <ul onMouseLeave={() => setActiveMenu(null)} className="border-b">
                 {projects.map((project, i) => (

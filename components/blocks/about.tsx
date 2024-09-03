@@ -82,22 +82,24 @@ const About = () => {
                 <div className="mb-2 h-[300px] w-[300px]">
                     <ImageHover />
                 </div>
-                <div className="mx-auto mb-10 mt-4 flex w-full max-w-2xl flex-col items-center justify-center px-4 text-center text-sm text-white sm:max-w-6xl">
+                <div className="text-primary-100 mx-auto mb-10 mt-4 flex w-full max-w-2xl flex-col items-center justify-center px-4 text-center text-sm sm:max-w-6xl">
                     <BlurIn
                         className="w-full select-text text-[16px] font-medium leading-normal text-gray-100/80 md:text-[20px]"
                         word="I am a Cyber Security Enthusiast and Ethical Hacker with a knack for web, mobile, and API security, as well as vulnerability assessment and penetration testing. Proficient with tools like BurpSuite, Acunetix, Nmap, and Kali Linux, and adept with various GitHub open-source tools, I've also developed scripts to aid the infosec community in identifying low-hanging bugs. My expertise has led to the discovery of critical vulnerabilities such as account takeovers and XSS, securing over 60 companies, including industry giants like Google, TripAdvisor, and Dell Technologies. Alongside my cybersecurity work, I have 2 years of experience in website and frontend development, having crafted over 12 websites. Additionally, I am a certified yoga teacher with over 3 years of teaching experience, blending technical proficiency with holistic wellness."
                     />
                 </div>
-                <div id="skills" className="hidden lg:block md:block z-10 cursor-pointer">
+                <div
+                    id="skills"
+                    className="z-10 hidden cursor-pointer md:block lg:block">
                     <Dialog>
                         <DialogTrigger asChild>
                             <button className="cursor-pointer rounded-full border border-gray-100/30 px-6 py-2 text-xl font-medium">
                                 My Skillset
                             </button>
                         </DialogTrigger>
-                        <DialogContent className="rounded-[8px] mx-auto border-none bg-primary outline-none lg:max-w-3xl sm:max-w-md">
-                            <div className="flex mx-auto items-center space-x-2">
-                                <div className="grid mx-auto gap-2">
+                        <DialogContent className="bg-primary-500 mx-auto rounded-[8px] border-none outline-none sm:max-w-md lg:max-w-3xl">
+                            <div className="mx-auto flex items-center space-x-2">
+                                <div className="mx-auto grid gap-2">
                                     <IconCloud iconSlugs={slugs} />
                                 </div>
                             </div>

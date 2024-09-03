@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react"
 import { motion } from "framer-motion"
 import { opacity, slideUp } from "@/data"
-import { Poppins } from "next/font/google"
 
 const words = ["ओ३म्", "ओ३म्", "खं", "खं", "ब्रह्म"]
 
@@ -45,9 +44,16 @@ const Preloader: React.FC = () => {
     }, [])
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.play()
+        const playAudio = async () => {
+            try {
+                if (audioRef.current) {
+                    await audioRef.current.play()
+                }
+            } catch (error) {
+                console.error("Failed to play audio:", error)
+            }
         }
+        playAudio()
     }, [])
 
     const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 100} 0 ${dimension.height} L0 0`
@@ -71,15 +77,14 @@ const Preloader: React.FC = () => {
             variants={slideUp}
             initial="initial"
             exit="exit"
-            className="fixed inset-0 z-[999] flex items-center justify-center bg-primary">
+            className="bg-primary-500 fixed inset-0 z-[999] flex items-center justify-center">
             {dimension.width > 0 && (
                 <>
                     <motion.p
                         variants={opacity}
                         initial="initial"
                         animate="enter"
-                        className="font-hindi relative z-10 flex items-center font-sans text-4xl tracking-wide text-white">
-                        {/* <span className="mr-2.5 block h-2.5 w-2.5 rounded-full bg-white"></span> */}
+                        className="relative z-10 flex items-center font-hindi text-4xl font-extrabold tracking-wide text-primary-100">
                         {words[index]}
                     </motion.p>
                     <svg className="absolute inset-0 h-full w-full">

@@ -18,6 +18,9 @@ const config = {
     ],
     prefix: "",
     theme: {
+        fontFamily: {
+            hindi: "Poppins, sans-serif",
+        },
         container: {
             center: true,
             padding: "2rem",
@@ -27,7 +30,17 @@ const config = {
         },
         extend: {
             colors: {
-                primary: "#0C0C0C",
+                primary: {
+                    100: '#E5E5E5',
+                    200: '#CCCCCC',
+                    300: '#B3B3B3',
+                    400: '#999999',
+                    500: '#0C0C0C',
+                    600: '#808080',
+                    700: '#666666',
+                    800: '#4C4C4C',
+                    900: '#333333',
+                  },
                 gray: {
                     100: "#C1C2D3"
                 },

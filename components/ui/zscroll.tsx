@@ -56,28 +56,28 @@ const ZScroll = () => {
         }
     }, [])
 
-        const frames = projects.map((item, index) => (
-            <div
-                key={index}
-                className="frame box absolute flex h-full w-full flex-col items-center justify-center rounded-[10px] bg-white p-8 text-center text-[30px] font-bold text-primary">
-                <div className="flex h-full w-full flex-col items-center justify-center">
-                    <Image
-                        src={item.src}
-                        alt={`Image for ${item.title}`}
-                        width={1280}
-                        height={720}
-                        className="h-[300px] w-[500px] rounded-[10px] object-cover"
-                    />
-                    <h2 className="mt-4">{item.title}</h2>
-                    <p className="mt-2 max-w-2xl text-lg font-medium text-gray-600">
-                        {item.description}
-                    </p>
-                    <button className="mt-4 rounded-full bg-primary px-4 py-2 text-base font-medium text-white">
-                        <Link href={item.link}>View Project</Link>
-                    </button>
-                </div>
+    const frames = projects.map((item, index) => (
+        <div
+            key={index}
+            className="frame box absolute flex h-full w-full flex-col items-center justify-center rounded-[10px] bg-white p-8 text-center text-[30px] font-bold text-primary">
+            <div className="flex h-full w-full flex-col items-center justify-center">
+                <Image
+                    src={item.src}
+                    alt={`Image for ${item.title}`}
+                    width={1280}
+                    height={720}
+                    className="h-[300px] w-[500px] rounded-[10px] object-cover"
+                />
+                <h2 className="mt-4">{item.title}</h2>
+                <p className="mt-2 max-w-2xl text-lg font-medium text-gray-600">
+                    {item.description}
+                </p>
+                <button className="bg-primary-500 text-primary-100 mt-4 rounded-full px-4 py-2 text-base font-medium">
+                    <Link href={item.link}>View Project</Link>
+                </button>
             </div>
-        ))
+        </div>
+    ))
 
     return (
         <div
@@ -89,8 +89,8 @@ const ZScroll = () => {
                 style={{ perspective: "300px", perspectiveOrigin: "50% 50%" }}>
                 <div
                     id="instructions-overlay"
-                    className="fixed z-50 flex h-full w-full flex-col items-center justify-center bg-primary">
-                    <h2 className="text-[25px] font-bold text-white">
+                    className="bg-primary-500 fixed z-50 flex h-full w-full flex-col items-center justify-center">
+                    <h2 className="text-primary-100 text-[25px] font-bold">
                         Scroll to view full page
                     </h2>
                 </div>

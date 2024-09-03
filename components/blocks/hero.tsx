@@ -18,8 +18,8 @@ const Hero = () => {
                 className="left-80 top-28 h-[80vh] w-[50vw] opacity-50"
                 fill="white"
             />
-            <div className="absolute left-0 top-0 flex h-screen w-full items-center justify-center bg-white bg-scroll bg-dot-black/[0.015] dark:bg-primary dark:bg-dot-white/[0.1]">
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white bg-scroll [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] dark:bg-primary" />
+            <div className="dark:bg-primary-500 absolute left-0 top-0 flex h-screen w-full items-center justify-center bg-white bg-scroll bg-dot-black/[0.015] dark:bg-dot-white/[0.1]">
+                <div className="dark:bg-primary-500 pointer-events-none absolute inset-0 flex items-center justify-center bg-white bg-scroll [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]" />
                 <Spline
                     scene="https://prod.spline.design/q4PgqiJYTfAFH-ZX/scene.splinecode"
                     className="z-50 h-full w-full object-cover"
@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="flex max-w-[92vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[65vw]">
                     <Button
                         borderRadius="1.75rem"
-                        className="max-w-96 select-text border border-white/[0.015] bg-primary px-5 py-2 text-center text-[12px] uppercase tracking-widest text-blue-100 lg:text-xs">
+                        className="bg-primary-500 max-w-96 select-text border border-white/[0.015] px-5 py-2 text-center text-[12px] uppercase tracking-widest text-blue-100 lg:text-xs">
                         <h1>👋🏼 Hello World! Eshan this side</h1>
                     </Button>
                     <TextGenerateEffect
@@ -41,7 +41,9 @@ const Hero = () => {
                         Developer from Bharat. I excel in securing digital
                         assets and creating innovative web solutions.
                     </p>
-                    <Link href="https://www.linkedin.com/in/r0x4r/" className="pointer-events-auto flex max-w-80 select-text items-center justify-center gap-2 rounded-[5px] border border-gray-100/20 bg-transparent p-4 text-center text-sm font-medium uppercase tracking-widest text-blue-100 transition-all hover:scale-105 hover:border-none hover:bg-red-600">
+                    <Link
+                        href="https://www.linkedin.com/in/r0x4r/"
+                        className="pointer-events-auto flex max-w-80 select-text items-center justify-center gap-2 rounded-[5px] border border-gray-100/20 bg-transparent p-4 text-center text-sm font-medium uppercase tracking-widest text-blue-100 transition-all duration-700 ease-in-out hover:scale-105 hover:border-none hover:bg-red-600">
                         <PiLinkedinLogoDuotone /> Visit my LinkedIn
                     </Link>
                 </div>
