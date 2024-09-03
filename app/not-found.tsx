@@ -1,7 +1,6 @@
 "use client"
 import Footer from "@/components/blocks/footer"
 import Header from "@/components/blocks/header"
-import FlickeringGrid from "@/components/magicui/flickering-grid"
 import Link from "next/link"
 import React, { useEffect, useRef, useState } from "react"
 
@@ -29,17 +28,9 @@ const NotFound = () => {
 
     return (
         <>
-            <Header />
-            <div className="relative flex h-screen min-h-screen flex-col items-center justify-center overflow-hidden">
-                <FlickeringGrid
-                    className="absolute inset-0 z-0 size-full"
-                    squareSize={2}
-                    gridGap={3}
-                    color="#999999"
-                    maxOpacity={0.5}
-                    flickerChance={0.1}
-                />
-                <div className="absolute inset-0 z-0 bg-black/50" />
+            {/* <Header /> */}
+            <div className="relative flex h-screen min-h-screen flex-col items-center justify-center overflow-hidden bg-[url('/images/background.jpg')] bg-cover bg-center">
+                <div className="absolute backdrop-blur-[0.5px] inset-0 z-0 bg-black/50" />
                 <div
                     id="countUp"
                     className="relative z-10 text-center text-white">
@@ -62,7 +53,7 @@ const NotFound = () => {
                     </Link>
                 </button>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }
