@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import { ThemeProvider } from "./provider"
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://eshansingh.in"),
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
         siteName: "Eshan Singh",
         images: [
             {
-                url: "/images/og-image.png",
+                url: "/og-image.png",
                 width: 1200,
                 height: 630,
             },
@@ -47,9 +46,9 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: "/images/favicon.png",
-        shortcut: "/images/favicon.png",
-        apple: "/images/favicon.png",
+        icon: "/favicon.png",
+        shortcut: "/favicon.png",
+        apple: "/favicon.png",
     },
     verification: {
         google: "93HaLAA9Ai7pLV67hlZV4FRQkG3SgvW1H3NeALAb09U",
@@ -63,26 +62,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-                    rel="stylesheet"
-                />
-            </head>
-            <body className="sticky-header bg-primary-500 scroll-smooth antialiased hover:subpixel-antialiased focus:scroll-auto">
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange>
-                    {children}
-                </ThemeProvider>
+            <body className="bg-dark scroll-smooth antialiased">
+                {children}
             </body>
         </html>
     )

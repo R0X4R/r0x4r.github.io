@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
-const svgToDataUri = require("mini-svg-data-uri");
+const svgToDataUri = require("mini-svg-data-uri")
 
-const colors = require("tailwindcss/colors");
+const colors = require("tailwindcss/colors")
 const {
     default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+} = require("tailwindcss/lib/util/flattenColorPalette")
 
 const config = {
     darkMode: ["class"],
@@ -18,45 +18,33 @@ const config = {
     ],
     prefix: "",
     theme: {
-        fontFamily: {
-            hindi: "Poppins, sans-serif",
-        },
-        container: {
-            center: true,
-            padding: "2rem",
-            screens: {
-                "2xl": "1400px",
-            },
-        },
         extend: {
             colors: {
-                primary: {
-                    100: '#E5E5E5',
-                    200: '#CCCCCC',
-                    300: '#B3B3B3',
-                    400: '#999999',
-                    500: '#0C0C0C',
-                    600: '#808080',
-                    700: '#666666',
-                    800: '#4C4C4C',
-                    900: '#333333',
-                  },
-                gray: {
-                    100: "#C1C2D3"
-                },
-                blue: {
-                    100: "#E4ECFF"
-                },
-                red: {
-                    100: "#FFCDD2"
-                }
+                dark: "#0D0D12",
+                light: "#F8FAFB",
+                primary: "#5B49E9",
+                secondary: "#33CFFF",
+                accent: "#666D80",
+                "color-1": "hsl(var(--color-1))",
+                "color-2": "hsl(var(--color-2))",
+                "color-3": "hsl(var(--color-3))",
+                "color-4": "hsl(var(--color-4))",
+                "color-5": "hsl(var(--color-5))",
             },
-            borderRadius: {
-                lg: "var(--radius)",
-                md: "calc(var(--radius) - 2px)",
-                sm: "calc(var(--radius) - 4px)",
+            animation: {
+                "border-beam":
+                    "border-beam calc(var(--duration)*1s) infinite linear",
+                marquee: "marquee var(--duration) linear infinite",
+                "marquee-vertical":
+                    "marquee-vertical var(--duration) linear infinite",
+                "background-position-spin":
+                    "background-position-spin 3000ms infinite alternate",
             },
             keyframes: {
+                "background-position-spin": {
+                    "0%": { backgroundPosition: "top center" },
+                    "100%": { backgroundPosition: "bottom center" },
+                },
                 marquee: {
                     from: { transform: "translateX(0)" },
                     to: { transform: "translateX(calc(-100% - var(--gap)))" },
@@ -65,97 +53,11 @@ const config = {
                     from: { transform: "translateY(0)" },
                     to: { transform: "translateY(calc(-100% - var(--gap)))" },
                 },
-                "accordion-down": {
-                    from: { height: "0" },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                },
-                "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: "0" },
-                },
-                spotlight: {
-                    "0%": {
-                        opacity: "0",
-                        transform: "translate(-72%, -62%) scale(0.5)",
-                    },
+                "border-beam": {
                     "100%": {
-                        opacity: "1",
-                        transform: "translate(-50%,-40%) scale(1)",
+                        "offset-distance": "100%",
                     },
                 },
-                shimmer: {
-                    from: {
-                        backgroundPosition: "0 0",
-                    },
-                    to: {
-                        backgroundPosition: "-200% 0",
-                    },
-                },
-                moveHorizontal: {
-                    "0%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                    "50%": {
-                        transform: "translateX(50%) translateY(10%)",
-                    },
-                    "100%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                },
-                moveInCircle: {
-                    "0%": {
-                        transform: "rotate(0deg)",
-                    },
-                    "50%": {
-                        transform: "rotate(180deg)",
-                    },
-                    "100%": {
-                        transform: "rotate(360deg)",
-                    },
-                },
-                moveVertical: {
-                    "0%": {
-                        transform: "translateY(-50%)",
-                    },
-                    "50%": {
-                        transform: "translateY(50%)",
-                    },
-                    "100%": {
-                        transform: "translateY(-50%)",
-                    },
-                },
-                scroll: {
-                    to: {
-                        transform: "translate(calc(-50% - 0.5rem))",
-                    },
-                },
-                grid: {
-                    "0%": { transform: "translateY(-50%)" },
-                    "100%": { transform: "translateY(0)" },
-                },
-                "background-position-spin": {
-                    "0%": { backgroundPosition: "top center" },
-                    "100%": { backgroundPosition: "bottom center" },
-                },
-            },
-            animation: {
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
-                spotlight: "spotlight 2s ease .75s 1 forwards",
-                shimmer: "shimmer 2s linear infinite",
-                first: "moveVertical 30s ease infinite",
-                second: "moveInCircle 20s reverse infinite",
-                third: "moveInCircle 40s linear infinite",
-                fourth: "moveHorizontal 40s ease infinite",
-                fifth: "moveInCircle 20s ease infinite",
-                marquee: "marquee var(--duration) linear infinite",
-                "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
-                scroll:
-                    "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-                grid: "grid 15s linear infinite",
-                backgroundPositionSpin:
-                    "background-position-spin 3000ms infinite alternate",
-                spinSlow: "spin 5s linear infinite",
             },
         },
     },
@@ -181,21 +83,24 @@ const config = {
                         )}")`,
                     }),
                 },
-                { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
-            );
+                {
+                    values: flattenColorPalette(theme("backgroundColor")),
+                    type: "color",
+                }
+            )
         },
     ],
-} satisfies Config;
+} satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {
-    let allColors = flattenColorPalette(theme("colors"));
+    let allColors = flattenColorPalette(theme("colors"))
     let newVars = Object.fromEntries(
         Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-    );
+    )
 
     addBase({
         ":root": newVars,
-    });
+    })
 }
 
-export default config;
+export default config

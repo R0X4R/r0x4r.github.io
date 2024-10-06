@@ -2,13 +2,13 @@
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion"
 import React, { MouseEvent as ReactMouseEvent, useState } from "react"
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect"
+import { CanvasRevealEffect } from "@/components/ui/CanvasReveal"
 import { cn } from "@/lib/utils"
 
 export const CardSpotlight = ({
     children,
     radius = 350,
-    color = "#0C0C0C",
+    color = "#F8FAFB",
     className,
     ...props
 }: {
@@ -35,7 +35,7 @@ export const CardSpotlight = ({
     return (
         <div
             className={cn(
-                "group/spotlight bg-primary-500 relative rounded-md border border-neutral-800 p-10 dark:border-neutral-800",
+                "group/spotlight h-48 relative rounded-2xl border-dark/15 border-dashed border",
                 className
             )}
             onMouseMove={handleMouseMove}
@@ -59,8 +59,8 @@ export const CardSpotlight = ({
                         animationSpeed={5}
                         containerClassName="bg-transparent absolute inset-0 pointer-events-none"
                         colors={[
-                            [255, 25, 25],
-                            [255, 229, 229],
+                            [13, 13, 18],
+                            [13, 13, 18],
                         ]}
                         dotSize={3}
                     />

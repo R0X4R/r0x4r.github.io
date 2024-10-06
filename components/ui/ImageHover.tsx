@@ -295,9 +295,9 @@ const HoverEffectComponent: React.FC = () => {
         if (containerRef.current) {
             initializeHoverEffect({
                 parent: containerRef.current,
-                displacementImage: "/images/4.png",
-                image1: "/images/self.jpg",
-                image2: "/images/yoga.jpg",
+                displacementImage: "/4.png",
+                image1: "/self.jpg",
+                image2: "/yoga.jpg",
             })
         }
     }, [])
@@ -305,7 +305,7 @@ const HoverEffectComponent: React.FC = () => {
     return (
         <div
             ref={containerRef}
-            className="relative cursor-pointer z-10 h-full w-full overflow-hidden rounded-full object-contain object-center transition-all duration-700 ease-in-out hover:-translate-y-5 hover:shadow-xl"
+            className="relative z-10 h-full w-full cursor-pointer overflow-hidden rounded-full object-contain object-center transition-all duration-700 ease-in-out hover:-translate-y-5 hover:shadow-xl"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}></div>
     )

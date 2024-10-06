@@ -38,14 +38,14 @@ export const EvervaultCard = ({
             )}>
             <div
                 onMouseMove={onMouseMove}
-                className="group/card relative flex h-full w-full items-center justify-center overflow-hidden rounded-[2px] bg-transparent">
+                className="group/card relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-transparent">
                 <CardPattern
                     mouseX={mouseX}
                     mouseY={mouseY}
                     randomString={randomString}
                 />
                 <div className="relative z-10 flex items-center justify-center">
-                    <div className="text-primary-100 relative flex h-44 w-44 items-center justify-center rounded-[5px] text-4xl font-bold">
+                    <div className="relative flex h-44 w-44 items-center justify-center rounded-[5px] text-4xl font-bold">
                         <div className="absolute h-full w-full rounded-full bg-white/[0.8] blur-sm dark:bg-black/[0.8]" />
                         <span className="dark:text-primary-100 z-20 capitalize text-black">
                             {text}
@@ -65,13 +65,13 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
         <div className="cursor-pointer">
             <div className="absolute inset-0 rounded-[2px] [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
             <motion.div
-                className="absolute inset-0 rounded-[2px] bg-gradient-to-r from-white to-red-700 opacity-0 backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
+                className="absolute inset-0 rounded-[2px] bg-gradient-to-r from-light to-dark opacity-0 backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
                 style={style}
             />
             <motion.div
                 className="absolute inset-0 rounded-[2px] opacity-0 mix-blend-overlay group-hover/card:opacity-100"
                 style={style}>
-                <p className="font-mono text-primary-100 absolute inset-x-0 h-full whitespace-pre-wrap break-words text-xs font-bold transition duration-500">
+                <p className="text-primary-100 absolute inset-x-0 h-full whitespace-pre-wrap break-words font-mono text-xs font-bold transition duration-500">
                     {randomString}
                 </p>
             </motion.div>

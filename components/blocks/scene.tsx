@@ -1,7 +1,7 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
-import Model from "../ui/Model";
+import Model from "@/components/ui/Model";
 
 // Define the props for the Scene component
 interface SceneProps {

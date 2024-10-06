@@ -73,8 +73,8 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
     borderSize = 2,
     borderRadius = 100,
     neonColors = {
-        firstColor: "#FF0000",
-        secondColor: "#FFFFFF",
+        firstColor: "#0D0D12",
+        secondColor: "#F8FAFB",
     },
     ...props
 }) => {
@@ -129,7 +129,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
             {...props}>
             <div
                 className={cn(
-                    "bg-primary-500 relative h-full min-h-[inherit] w-full rounded-[var(--card-content-radius)]",
+                    "bg-transparent relative h-full min-h-[inherit] w-full rounded-[var(--card-content-radius)]",
                     "before:absolute before:-left-[var(--border-size)] before:-top-[var(--border-size)] before:-z-10 before:block",
                     "before:h-[var(--pseudo-element-height)] before:w-[var(--pseudo-element-width)] before:rounded-[var(--border-radius)] before:content-['']",
                     "before:bg-[linear-gradient(0deg,var(--neon-first-color),var(--neon-second-color))] before:bg-[length:100%_200%]",

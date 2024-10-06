@@ -60,46 +60,51 @@ export const gridItems = [
         img: "",
         spareImg: "",
     },
-];
+]
 
 export const projects = [
     {
         title: "CAIES Foundation Website",
-        src: "/images/1.jpg",
-        description: "The Center for Artificial Intelligence and Environmental Sustainability (CAIES) Foundation, is a niche Section (8) non-profit organization that focuses on trans-disciplinary challenges, which require sustainable outcomes that are implementable and operational in the areas of environment, economics, and society through extensive research and development using cutting edge data science, machine learning, artificial intelligence, and geospatial tools and technologies.",
-        link: "https://caienvsus.org"
+        src: "/1.jpg",
+        description:
+            "The Center for Artificial Intelligence and Environmental Sustainability (CAIES) Foundation, is a niche Section (8) non-profit organization that focuses on trans-disciplinary challenges, which require sustainable outcomes that are implementable and operational in the areas of environment, economics, and society through extensive research and development using cutting edge data science, machine learning, artificial intelligence, and geospatial tools and technologies.",
+        link: "https://caienvsus.org",
     },
     {
         title: "Garud",
-        src: "/images/2.jpg",
-        description: "An automation tool that scans sub-domains, sub-domain takeover, then filters out XSS, SSTI, SSRF, and more injection point parameters and scans for some low hanging vulnerabilities automatically.",
-        link: "https://github.com/R0X4R/Garud"
+        src: "/2.jpg",
+        description:
+            "An automation tool that scans sub-domains, sub-domain takeover, then filters out XSS, SSTI, SSRF, and more injection point parameters and scans for some low hanging vulnerabilities automatically.",
+        link: "https://github.com/R0X4R/Garud",
     },
     {
         title: "Bhedak",
-        src: "/images/3.jpg",
-        description: "A replacement of qsreplace, accepts URLs as standard input, replaces all query string values with user-supplied values and stdout. Works on every OS. Made with python",
-        link:"https://github.com/R0X4R/bhedak"
+        src: "/3.jpg",
+        description:
+            "A replacement of qsreplace, accepts URLs as standard input, replaces all query string values with user-supplied values and stdout. Works on every OS. Made with python",
+        link: "https://github.com/R0X4R/bhedak",
     },
     {
         title: "Snetra",
-        src: "/images/4.jpg",
-        description: "A Python based scanner uses shodan-internetdb to scan the IP.",
-        link: "https://github.com/R0X4R/snetra"
+        src: "/4.jpg",
+        description:
+            "A Python based scanner uses shodan-internetdb to scan the IP.",
+        link: "https://github.com/R0X4R/snetra",
     },
     {
         title: "Agnee",
-        src: "/images/5.jpg",
-        description: "Find sensitive information using dorks from different search-engines.",
-        link: "https://github.com/R0X4R/Agnee"
+        src: "/5.jpg",
+        description:
+            "Find sensitive information using dorks from different search-engines.",
+        link: "https://github.com/R0X4R/Agnee",
     },
     {
         title: "Parshu",
-        src: "/images/6.jpg",
+        src: "/6.jpg",
         description: "Filter URLs to save your time using regex",
-        link: "https://github.com/R0X4R/Parshu"
-    }
-];
+        link: "https://github.com/R0X4R/Parshu",
+    },
+]
 
 export const companies = [
     { name: "Apple logo", img: "/companies/apple.png" },
@@ -118,73 +123,80 @@ export const companies = [
     { name: "UN Women logo", img: "/companies/unwomen.png" },
     { name: "Upwork logo", img: "/companies/upwork.png" },
     { name: "Vonage logo", img: "/companies/vonage.png" },
-    { name: "Western Union logo", img: "/companies/westernu.png" }
-];
+    { name: "Western Union logo", img: "/companies/westernu.png" },
+]
 
 export const blogs = [
     {
-        "title": "GraphQL IDOR leads to information disclosure",
-        "description": "While doing recon for redacted.com (A private program and as per their privacy policies, I cannot disclose their name), I found that the web app is using GraphQL for their API Management. So, I firstly tried Introspection Query to extract sensitive information.After passing the query I saw a field called Users, so I pass",
-        "link": "https://medium.com/bugbountywriteup/graphql-idor-leads-to-information-disclosure-175eb560170d",
-        "type": "blog"
+        title: "GraphQL IDOR leads to information disclosure",
+        description:
+            "While doing recon for redacted.com (A private program and as per their privacy policies, I cannot disclose their name), I found that the web app is using GraphQL for their API Management. So, I firstly tried Introspection Query to extract sensitive information.After passing the query I saw a field called Users, so I pass",
+        link: "https://medium.com/bugbountywriteup/graphql-idor-leads-to-information-disclosure-175eb560170d",
+        type: "blog",
     },
     {
-        "title": "GraphQL introspection leads to sensitive data disclosure",
-        "description": "For Discovering this bug, I learned the fundamentals of GraphQL for at least 5–6 hours and read all other relevant bug reports, especially Namhamsec’s GraphQL CTF Challenge. After that, I saw a new program on Bugcrowd, so I participated in it.They gave me a domain [let’s take the domain as example.com because the vulnerability hasn’t fixed yet], i.e.example.com.",
-        "link": "https://medium.com/bugbountywriteup/graphql-introspection-leads-to-sensitive-data-disclosure-714f1d9d9d4a",
-        "type": "blog"
+        title: "GraphQL introspection leads to sensitive data disclosure",
+        description:
+            "For Discovering this bug, I learned the fundamentals of GraphQL for at least 5–6 hours and read all other relevant bug reports, especially Namhamsec’s GraphQL CTF Challenge. After that, I saw a new program on Bugcrowd, so I participated in it.They gave me a domain [let’s take the domain as example.com because the vulnerability hasn’t fixed yet], i.e.example.com.",
+        link: "https://medium.com/bugbountywriteup/graphql-introspection-leads-to-sensitive-data-disclosure-714f1d9d9d4a",
+        type: "blog",
     },
     {
-        "title": "Introduction to Blind XSS",
-        "description": "Last year I was scrolling my LinkedIn Profile feeds suddenly a post came in front of me. In that post, a Bug Hunter posted his PoC about how he found Blind-XSS in Spotify. I was surprised after hearing about BXSS. I was surprised at that moment after watching that there is another category of XSS which is known as BLIND XSS. ",
-        "link": "https://medium.com/@R0X4R/introduction-to-blind-xss-417dcf9c842c",
-        "type": "blog"
+        title: "Introduction to Blind XSS",
+        description:
+            "Last year I was scrolling my LinkedIn Profile feeds suddenly a post came in front of me. In that post, a Bug Hunter posted his PoC about how he found Blind-XSS in Spotify. I was surprised after hearing about BXSS. I was surprised at that moment after watching that there is another category of XSS which is known as BLIND XSS. ",
+        link: "https://medium.com/@R0X4R/introduction-to-blind-xss-417dcf9c842c",
+        type: "blog",
     },
     {
-        "title": "Learn with @R0X4R: Recon Automation & How To Approach For Help",
-        "description": "In this video, Eshan Singh (@r0x4r) has shown his way of recon and which tool he uses to automate the process also he has explained how to approach another researcher for help.",
-        "link": "https://youtu.be/AMj91azYUmE",
-        "type": "video"
+        title: "Learn with @R0X4R: Recon Automation & How To Approach For Help",
+        description:
+            "In this video, Eshan Singh (@r0x4r) has shown his way of recon and which tool he uses to automate the process also he has explained how to approach another researcher for help.",
+        link: "https://youtu.be/AMj91azYUmE",
+        type: "video",
     },
     {
-        "title": "Master FFUF for Bug Bounty",
-        "description": "FFUF is a great tool for fuzzing. It is a fast web fuzzer written in Go. It is used to fuzz parameters, headers, and other parts of a web application. It is a great tool for bug bounty hunters and penetration testers. It is a very fast fuzzer. It is used to find hidden files and directories on a web server. It is a very powerful tool.",
-        "link": "https://www.youtube.com/watch?v=e65H7QGJmc0",
-        "type": "video"
+        title: "Master FFUF for Bug Bounty",
+        description:
+            "FFUF is a great tool for fuzzing. It is a fast web fuzzer written in Go. It is used to fuzz parameters, headers, and other parts of a web application. It is a great tool for bug bounty hunters and penetration testers. It is a very fast fuzzer. It is used to find hidden files and directories on a web server. It is a very powerful tool.",
+        link: "https://www.youtube.com/watch?v=e65H7QGJmc0",
+        type: "video",
     },
     {
-        "title": "Bug Bounty POC: Oneplus",
-        "description": "This video demonstrates a proof of concept (POC) for an XSS vulnerability found on the OnePlus website. It details the steps taken to discover and exploit the vulnerability, providing valuable insights for security enthusiasts.",
-        "link": "https://www.youtube.com/watch?v=h9ZVke2b2Es",
-        "type": "video"
+        title: "Bug Bounty POC: Oneplus",
+        description:
+            "This video demonstrates a proof of concept (POC) for an XSS vulnerability found on the OnePlus website. It details the steps taken to discover and exploit the vulnerability, providing valuable insights for security enthusiasts.",
+        link: "https://www.youtube.com/watch?v=h9ZVke2b2Es",
+        type: "video",
     },
     {
-        "title": "Escalate Open-redirection into XSS",
-        "description": "This video shows how an open-redirection vulnerability can be escalated into an XSS attack. It provides a step-by-step guide on finding the open-redirection issue and exploiting it for XSS, offering useful information for security researchers.",
-        "link": "https://www.youtube.com/watch?v=n5WA9r1j_ZI",
-        "type": "video"
-    }
-];
+        title: "Escalate Open-redirection into XSS",
+        description:
+            "This video shows how an open-redirection vulnerability can be escalated into an XSS attack. It provides a step-by-step guide on finding the open-redirection issue and exploiting it for XSS, offering useful information for security researchers.",
+        link: "https://www.youtube.com/watch?v=n5WA9r1j_ZI",
+        type: "video",
+    },
+]
 
 export const opacity = {
     initial: {
-        opacity: 0
+        opacity: 0,
     },
     enter: {
         opacity: 0.75,
-        transition: { duration: 1, delay: 0.2 }
-    }
-};
+        transition: { duration: 1, delay: 0.2 },
+    },
+}
 
 export const slideUp = {
     initial: {
-        top: 0
+        top: 0,
     },
     exit: {
         top: "-100vh",
-        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }
-    }
-};
+        transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+    },
+}
 
 export const education = [
     {

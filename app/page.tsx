@@ -1,10 +1,9 @@
-import React from "react"
 import About from "@/components/blocks/about"
 import Footer from "@/components/blocks/footer"
+import Header from "@/components/blocks/header"
 import Hero from "@/components/blocks/hero"
 import Preloader from "@/components/blocks/preloader"
 import Services from "@/components/blocks/services"
-import Header from "@/components/blocks/header"
 
 interface CustomMetadata {
     title: string
@@ -34,9 +33,11 @@ export default function Home() {
         <>
             <Preloader />
             <Header />
-            <Hero />
-            <About />
-            <Services />
+            <main className="flex flex-col items-center justify-center rounded-b-3xl bg-light p-4">
+                <Hero />
+                <About />
+                <Services />
+            </main>
             <Footer />
         </>
     )

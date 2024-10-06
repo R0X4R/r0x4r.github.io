@@ -9,32 +9,28 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ setActiveMenu }) => {
     return (
-        <div className="text-primary-100 relative z-10 min-h-screen w-full cursor-pointer overflow-y-auto mix-blend-difference">
-            <div className="flex items-center justify-between px-1 lg:px-5">
-                <h2 className="py-8 text-lg font-black uppercase tracking-wide sm:text-2xl md:text-2xl lg:text-5xl">
-                    My Projects
+        <div className="relative z-10 min-h-screen w-full overflow-y-auto">
+            <div className="flex items-center justify-center px-1 mix-blend-screen mb-16 lg:px-5">
+                <h2 className="text-lg font-normal text-center text-dark/60 md:text-2xl lg:text-5xl">
+                    These are a few projects that I have made
                 </h2>
-                {/* <Link
-                    href="/projects"
-                    className="group flex cursor-pointer items-center justify-center gap-2 bg-transparent text-xs font-medium uppercase tracking-wide text-primary-100 lg:text-xl">
-                    View All Projects
-                    <span className="hidden transition-all duration-700 ease-in-out group-hover:block">
-                        <AiOutlineArrowRight />
-                    </span>
-                </Link> */}
             </div>
-            <ul onMouseLeave={() => setActiveMenu(null)} className="border-b">
-                {projects.map((project, i) => (
-                    <li
-                        onMouseOver={() => setActiveMenu(i)}
-                        key={project.title}
-                        className="border-t border-gray-100 px-5 py-8 text-xl font-medium text-gray-100 sm:text-xl md:text-lg lg:text-5xl">
-                        <Link href={project.link}>
-                            <p>{project.title}</p>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <div className="relative z-10 min-h-screen w-full cursor-pointer overflow-y-auto mix-blend-difference">
+                <ul
+                    onMouseLeave={() => setActiveMenu(null)}
+                    className="border-b">
+                    {projects.map((project, i) => (
+                        <li
+                            onMouseOver={() => setActiveMenu(i)}
+                            key={project.title}
+                            className="border-t border-dashed border-dark/20 px-5 py-8 font-medium text-xl md:text-lg lg:text-5xl mix-blend-difference">
+                            <Link href={project.link}>
+                                <p>{project.title}</p>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

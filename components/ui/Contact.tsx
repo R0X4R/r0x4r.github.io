@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
                         type="text"
                         autoComplete="name"
                         required
-                        className="text-primary-100 relative block w-full rounded-[5px] px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg"
+                        className="text-dark relative block w-full border-dark/10 border-b px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg bg-accent/5"
                         placeholder="Full Name"
                     />
                 </div>
@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
                         type="email"
                         autoComplete="email"
                         required
-                        className="text-primary-100 relative block w-full rounded-[5px] px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg"
+                        className="text-dark relative block w-full border-dark/10 border-b px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg bg-accent/5"
                         placeholder="Email address"
                     />
                 </div>
@@ -77,14 +77,14 @@ const ContactForm: React.FC = () => {
                         name="message"
                         rows={4}
                         required
-                        className="text-primary-100 relative block w-full rounded-[5px] px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg"
+                        className="text-dark relative block w-full border-dark/10 border-b px-3 py-3 text-sm placeholder-gray-500 outline-none focus:z-10 lg:text-lg bg-accent/5"
                         placeholder="Your Message"></textarea>
                 </div>
             </div>
             <div>
                 <button
                     type="submit"
-                    className="text-primary-100 group relative flex w-full max-w-[10em] justify-center rounded-[3px] bg-red-600 px-4 py-3 text-sm font-medium lg:text-lg">
+                    className="text-dark hover:bg-dark hover:text-light relative flex w-full max-w-40 justify-center border-dark/15 bg-dark/10 border-b px-4 py-3 text-sm font-medium lg:text-lg">
                     Send Message
                 </button>
             </div>

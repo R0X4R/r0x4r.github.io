@@ -1,6 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/rules-of-hooks */
-
 "use client"
 import { cn } from "@/lib/utils"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
@@ -10,7 +7,7 @@ import * as THREE from "three"
 export const CanvasRevealEffect = ({
     animationSpeed = 0.4,
     opacities = [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1],
-    colors = [[0, 255, 255]],
+    colors = [[13, 13, 18]],
     containerClassName,
     dotSize,
     showGradient = true,
@@ -29,13 +26,13 @@ export const CanvasRevealEffect = ({
     return (
         <div
             className={cn(
-                "relative h-full w-full bg-white",
+                "relative h-full w-full bg-light",
                 containerClassName
             )}>
             <div className="h-full w-full">
                 <DotMatrix
-                    colors={colors ?? [[0, 255, 255]]}
-                    dotSize={dotSize ?? 3}
+                    colors={colors ?? [[13, 13, 18]]}
+                    dotSize={dotSize ?? 5}
                     opacities={
                         opacities ?? [
                             0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1,
@@ -51,7 +48,7 @@ export const CanvasRevealEffect = ({
                 />
             </div>
             {showGradient && (
-                <div className="absolute inset-0 bg-gradient-to-t from-primary to-[84%]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-light to-[84%]" />
             )}
         </div>
     )
