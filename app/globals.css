@@ -5,6 +5,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Poppins'; /* Give it a name */
+    src: url('/Poppins-ExtraBold.ttf') format('truetype'); /* Path to your TTF font */
+    font-weight: bold; /* Specify weight if necessary */
+    font-style: normal; /* Specify style if necessary */
+}
+
+.hindi-text {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: bold;
+}
+
 :root {
     --color-1: 0 100% 63%;
     --color-2: 270 100% 63%;
@@ -17,10 +29,6 @@
 html,
 body {
     font-family: "Satoshi", sans-serif;
-}
-
-.hindi-text {
-    font-family: "Poppins", sans-serif;
 }
 
 #hero::selection {

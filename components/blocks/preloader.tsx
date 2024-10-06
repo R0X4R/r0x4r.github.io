@@ -73,7 +73,7 @@ const Preloader: React.FC = () => {
                                 variants={opacity}
                                 initial="initial"
                                 animate="enter"
-                                className="hindi-text text-light relative z-10 flex items-center text-4xl font-extrabold tracking-wide">
+                                className="hindi-text text-light relative z-10 flex items-center text-4xl tracking-wide">
                                 {words[index]}
                             </motion.p>
                             <svg className="absolute inset-0 h-full w-full">
