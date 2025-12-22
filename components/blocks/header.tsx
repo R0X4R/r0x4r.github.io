@@ -44,7 +44,7 @@ const Header = () => {
                         alt="Logo"
                         width={300}
                         height={300}
-                        className="size-12 grayscale rounded-full group-hover:grayscale-0"
+                        className="size-12 grayscale rounded-full object-cover group-hover:grayscale-0"
                     />
                     <h2 className="text-xl font-black tracking-tighter text-dark">
                         R0X4R
